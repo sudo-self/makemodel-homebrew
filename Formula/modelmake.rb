@@ -2,18 +2,18 @@ class Modelmake < Formula
   desc "3D Model Conversion, Scaling, and Optimization Tool"
   homepage "https://github.com/sudo-self/makemodel-homebrew"
   url "https://github.com/sudo-self/makemodel-homebrew/raw/main/modelmake.tar.gz", using: :curl
-  sha256 "26d564a629d69dfdd4c4d22c61ed3df160e94a46b483350244e8553917370f7e"  # Ensure this SHA256 is correct
+  sha256 "26d564a629d69dfdd4c4d22c61ed3df160e94a46b483350244e8553917370f7e"
+  version "2023.04.06"  # Pseudo version or use a commit hash
 
   depends_on "python@3.9"
 
   def install
-    # Install the script in the bin directory
     bin.install "modelmake.py" => "modelmake"
   end
 
   test do
-    # Test that the tool runs and outputs help information
     system "#{bin}/modelmake", "--help"
   end
 end
+
 
